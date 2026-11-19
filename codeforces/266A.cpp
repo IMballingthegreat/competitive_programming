@@ -1,18 +1,23 @@
-#include <iostream>
+#include <bits/stdc++.h>
+
 void solve(){
-  int n;
-  std::cin >> n;
-  std::string s;
-  std::cin >> s;
-  int cnt =0;
-  for(int i =0;i<n;i++){
-    if(s[i]==s[i-1]){
-      cnt++;
+    int n{};
+    std::cin >> n;
+    
+
+    
+    std::string s;
+    std::cin >> s;
+    int cnt =0;
+    for(int i =1;i<n;i++){
+        if(s[i]==s[i-1]){
+            cnt++;
+        }
     }
-  }
-  std::cout << cnt << '\n';
+    std::cout << cnt;
 }
-int main(void){
-  solve();
-  return 0;
+
+int main(){
+    solve();
+    return 0;
 }

@@ -1,28 +1,30 @@
 #include <iostream>
+#include <string>
 void solve(){
     std::string s;
     std::cin >> s;
-    int cntu=0,cntl=0;
-    for(int i =0;i<s.size();i++){
-        if(isupper(s[i])){
-            cntu++;
+    int cntl =0;
+    int cnth = 0;
+    for(int i = 0;i<s.size();i++){
+        if(islower(s[i])){
+                cntl++;
         }else{
-            cntl++;
+                cnth++;
         }
+        
     }
     for(int i =0;i<s.size();i++){
-        if(cntu>cntl){
-            s[i] = toupper(s[i]);
+        if(cntl>=cnth){
+            s[i]= tolower(s[i]);
         }else{
-           s[i] = tolower(s[i]); 
+           s[i]=  toupper(s[i]);
+        
         }
-
     }
-   for(char ch : s){
-    std::cout << ch;
+    
+    std::cout << s ;
    }
-}
-int main(){
+int main(void){
     solve();
     return 0;
 }
