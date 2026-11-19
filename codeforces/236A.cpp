@@ -10,7 +10,7 @@ void solve(){
     if(st.size()%2==0){
         std::cout <<"CHAT WITH HER!";
     }else{
-        std::cout << "IGNORE HIM!";
+        std::cout << "IGNORE HIM! " ;
     }
 
 }
