@@ -1,20 +1,21 @@
-#include <bits/stdc++.h>
+#include <iostream>
 #include <string>
 void solve(){
-    int n{};
-    std::cin >> n;
-    while(n--){
+    int t;
+    std::cin >> t;
+    while(t--){
         std::string s;
         std::cin >> s;
-        if(s.size()>10){
-            std::cout << s[0]<< s.size()-2<< s[s.size()-1]<<'\n';
-        }
-        else{
+        if(s.size()<=10){
             std::cout << s << '\n';
+        }else{
+            
+            std::cout << s[0] << s.size()-2<< s[s.size()-1]<< '\n';
         }
-}        
+    }
+
 }
-int main(void){
+int main(){
     solve();
     return 0;
 }

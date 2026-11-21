@@ -1,17 +1,23 @@
-#include <bits/stdc++.h>
+#include <iostream>
 void solve(){
-    std::string a;
-    std::string b;
+    std::string a,b;
     std::cin >> a >> b;
     for(int i =0;i<a.size();i++){
-        a[i] = tolower(a[i]);
-        b[i]=tolower(b[i]);
+        a[i]= toupper(a[i]);
+        b[i]= toupper(b[i]);
+
     }
+    if(a>b){
+        std::cout << 1 << '\n';
+    }else if(a<b){
+        std::cout << -1 << '\n';
+    }else{
+        std::cout << 0 << '\n';
+    }
+        
+    
 
-    if(a<b)std::cout << -1;
-    else if(a>b)std::cout << 1;
-    else std::cout << 0;
-
+    
 }
 int main(){
     solve();

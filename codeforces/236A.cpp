@@ -1,18 +1,24 @@
-#include <bits/stdc++.h>
-
+#include <iostream>
+#include <string>
+#include <unordered_map>
 void solve(){
     std::string s;
     std::cin >> s;
-    std::unordered_set<char>st;
-    for(int i =0;i<s.size();i++){
-        st.insert(s[i]);
+    std::unordered_map<char,int>mp;
+    for(char num:s){
+        mp[num]++;
     }
-    if(st.size()%2==0){
-        std::cout <<"CHAT WITH HER!";
+    int cnt =0;
+    for(auto&num:mp){
+        if(num.second>=1){
+            cnt++;
+        }
+    }
+    if(cnt%2==0){
+        std::cout << "CHAT WITH HER!" << '\n';
     }else{
-        std::cout << "IGNORE HIM! " ;
+        std::cout << "IGNORE HIM!" << '\n';
     }
-
 }
 int main(){
     solve();
